@@ -1,0 +1,230 @@
+// New in
+
+.new-products {
+  padding-top: 120px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 60px;
+  }
+}
+
+.new-products__header {
+  @include center-fix-width(15px, 1200px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media (max-width: 1169px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 708px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 320px;
+  }
+}
+
+.new-products__header h2 {
+  @include font(34px, 44.2px);
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 700;
+  color: $main-text-color;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.new-products__header a {
+  display: block;
+  margin-bottom: 58px;
+  border-bottom: 1px solid $main-brown;
+  line-height: 20.8px;
+  color: $main-text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $main-brown;
+  }
+
+  &:active {
+    color: $main-brown;
+    opacity: 0.8;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.new-products__swiper-button-prev,
+.new-products__swiper-button-next {
+  @include size(60px, 60px);
+  @include indent-0;
+  top: 15%;
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    outline: 1px dotted $main-brown;
+  }
+
+  &:active {
+    outline: 1px solid $main-brown;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.new-products__swiper-button-prev {
+  left: -4px;
+  top: 19px;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+  }
+}
+
+.new-products__swiper-button-next {
+  right: -4px;
+  top: 19px;
+
+  @media (max-width: $tablet-width) {
+    right: 0;
+  }
+}
+
+.new-products__swiper-button-prev svg,
+.new-products__swiper-button-next svg {
+  fill: $main-brown;
+
+  @media (max-width: $tablet-width) {
+    @include size(36px, 15px);
+  }
+}
+
+.new-products__swiper-button-prev svg {
+  transform: rotate(180deg);
+}
+
+.new-products__swiper {
+  @include center-fix-width(15px, 1200px);
+
+  @media (max-width: 1169px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 708px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 320px;
+  }
+}
+
+.new-products__list {
+  @include list-reset;
+  min-width: 0;
+}
+
+.new-products__pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.new-products__pagination span {
+  @include size(15px, 15px);
+  text-align: center;
+  background-color: transparent;
+}
+
+.new-products__mobile-pagination {
+  padding-top: 30px;
+  padding-bottom: 55px;
+  text-align: center;
+
+  @media (min-width: $tablet-min-width) {
+    display: none;
+  }
+}
+
+.new-products__nojs-paginaton-item {
+  display: none;
+}
+
+// No JS slider
+
+.new-products--nojs .swiper-wrapper {
+  width: auto;
+  transition-property: none;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.new-products--nojs .new-products__item:nth-child(n + 5) {
+  display: none;
+}
+
+.new-products--nojs .new-products__item:nth-child(4) {
+  @media (max-width: 1169px) {
+    display: none;
+  }
+}
+
+.new-products--nojs .swiper-slide {
+  width: auto;
+}
+
+.new-products--nojs .new-products__nojs-paginaton-item:nth-child(1),
+.new-products--nojs .new-products__nojs-paginaton-item:nth-child(2),
+.new-products--nojs .new-products__nojs-paginaton-item:nth-child(3) {
+  display: inline;
+}
+
+.new-products--nojs .new-products__nojs-paginaton-item:nth-child(4) {
+  @media (max-width: 1169px) {
+    display: inline;
+  }
+}
+
+.new-products--nojs .new-products__nojs-paginaton-item:nth-child(n + 5) {
+  @media (max-width: $tablet-width) {
+    display: inline;
+  }
+}

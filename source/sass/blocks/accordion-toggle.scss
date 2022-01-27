@@ -1,0 +1,31 @@
+// Accordion Toggle
+
+.accordion-toggle {
+  @include size(22px, 21px);
+  display: flex;
+  padding: 6px 0px 6px 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--nojs {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 4px 0 0 0;
+  }
+}
+
+.accordion-toggle__icon {
+  fill: $main-brown;
+
+  &--open {
+    transform: rotate(180deg);
+    // transform: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    @include size(24px, 13px);
+  }
+}

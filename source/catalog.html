@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Handmade Jewelry: necklaces, earrings and bracelets. Unique design. Affordable prices. Worldwide shipping.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHJewellery || online-shop</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/CormorantGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <object style="display: none;" data="img/svg/sprite.svg" type="image/svg+xml"></object>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+      <div class="page-header__button-box">
+        <button class="page-header__menu-button page-header__menu-button--nojs" type="button" aria-label="Main Menu"></button>
+      </div>
+      <div class="page-header__form-wrapper">
+        <form action="https://echo.htmlacademy.ru" name="search" method="post" target="_blank">
+          <input type="search" placeholder="Type here to search" name="search" autocomplete="off" required>
+        </form>
+      </div>
+      <a class="page-header__home-link" href="main.html">
+        <svg class="page-header__logo" width="66" height="66">
+          <use xlink:href="img/svg/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="page-header__user-links">
+        <a class="page-header__login" href="login.html">Login</a>
+        <a class="page-header__cart" href="#" aria-label="User Cart">
+          <span>Cart </span><span>0</span>
+          <svg width="20" height="18">
+            <use xlink:href="img/svg/sprite.svg#cart-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav class="page-header__nav main-nav main-nav--nojs">
+      <ul class="main-nav__main-list">
+        <li><a href="#">What's new</a></li>
+        <li><a href="#">Chokers</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+      </ul>
+      <ul class="main-nav__extra-list">
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <a class="main-nav__login" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="page__main">
+    <div class="title-block title-block--catalog-page">
+      <div class="title-block__inner">
+        <h1 class="visually-hidden">CH Jewellery / Catalog</h1>
+        <p>All Jewellery</p>
+        <i>Discover picks of fashion's finest trends in our jewellery catalog</i>
+      </div>
+    </div>
+    <section class="catalog">
+      <h2 class="visually-hidden">Catalog</h2>
+      <div class="catalog__inner">
+        <div class="catalog__filter-wrapper">
+          <button class="catalog__filter-toggle button" type="button">Filter</button>
+          <div class="catalog__filter filter">
+            <form action="https://echo.htmlacademy.ru" name="catalog-filter" method="post" target="_blank">
+              <button class="filter__close-button" type="button" aria-label="Close Filter">
+                <svg width="14" height="14">
+                  <use xlink:href="img/svg/sprite.svg#close-icon"></use>
+                </svg>
+              </button>
+              <fieldset class="filter__group">
+                <legend class="filter__group-name" data-block-id="jewellerry-type">
+                  Product
+                  <button class="filter__fieldset-toggle accordion-toggle accordion-toggle--nojs" type="button" aria-label="Expand">
+                    <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="16" height="9">
+                      <use xlink:href="img/svg/sprite.svg#accordion-toggle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="filter__group-inner" id="jewellerry-type">
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="jewellerry-type-necklaces" id="necklaces" checked>
+                    <label for="necklaces">Necklaces</label>
+                  </div>
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="jewellerry-type-chockers" id="chockers" checked>
+                    <label for="chockers">Chokers</label>
+                  </div>
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="jewellerry-type-rings" id="rings">
+                    <label for="rings">Rings</label>
+                  </div>
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="jewellerry-type-earrings" id="earrings" checked>
+                    <label for="earrings">Earrings</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter__group">
+                <legend class="filter__group-name" data-block-id="material-type">
+                  Material
+                  <button class="filter__fieldset-toggle accordion-toggle accordion-toggle--nojs" type="button" aria-label="Expand">
+                    <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="16" height="9">
+                      <use xlink:href="img/svg/sprite.svg#accordion-toggle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="filter__group-inner" id="material-type">
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked>
+                    <label for="gold">Gold</label>
+                  </div>
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="jewellerry-type" id="silver">
+                    <label for="silver">Silver</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter__group">
+                <legend class="filter__group-name" data-block-id="collection-name">
+                  Collection
+                  <button class="filter__fieldset-toggle accordion-toggle accordion-toggle--nojs" type="button" aria-label="Expand">
+                    <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="16" height="9">
+                      <use xlink:href="img/svg/sprite.svg#accordion-toggle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="filter__group-inner" id="collection-name">
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="pink-flamingo-collection" id="pink-flamingo" checked>
+                    <label for="pink-flamingo">Pink Flamingo</label>
+                  </div>
+                  <div class="filter__input-wrapper">
+                    <input class="visually-hidden" type="checkbox" name="dreams-collection" id="dreams">
+                    <label for="dreams">Dreams</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter__group">
+                <legend class="filter__group-name" data-block-id="price">
+                  Price
+                  <button class="filter__fieldset-toggle accordion-toggle accordion-toggle--nojs" type="button" aria-label="Expand">
+                    <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="16" height="9">
+                      <use xlink:href="img/svg/sprite.svg#accordion-toggle"></use>
+                    </svg>
+                  </button>
+                </legend>
+                <div class="filter__group-inner filter__group-inner--price" id="price">
+                  <div class="filter__scale-line">
+                    <div class="filter__scale-active"></div>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="filter__submit button" type="submit">Apply</button>
+              <button class="filter__reset button button--transparent" type="reset" name="catalog-filter">Clear All</button>
+            </form>
+          </div>
+        </div>
+        <div class="catalog__product-list">
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_double-pearl-earrings.webp 1x, img/webp/products_double-pearl-earrings@2x.webp 2x">
+                <img src="img/jpg/products_double-pearl-earrings.jpg" srcset="img/jpg/products_double-pearl-earrings@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Double pearl earrings </p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 115</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_choker-with-gold-bead.webp 1x, img/webp/products_choker-with-gold-bead@2x.webp 2x">
+                <img src="img/jpg/products_choker-with-gold-bead.jpg" srcset="img/jpg/products_choker-with-gold-bead@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Choker with gold bead</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 55</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_gold-layered-necklace.webp 1x, img/webp/products_gold-layered-necklace@2x.webp 2x">
+                <img src="img/jpg/products_gold-layered-necklace.jpg" srcset="img/jpg/products_gold-layered-necklace@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Gold layered necklace</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 155</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_blue-gemstone-pendant.webp 1x, img/webp/products_blue-gemstone-pendant@2x.webp 2x">
+                <img src="img/jpg/products_blue-gemstone-pendant.jpg" srcset="img/jpg/products_blue-gemstone-pendant@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Blue gemstone pendant</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 105</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_boho-earrings.webp 1x, img/webp/products_boho-earrings@2x.webp 2x">
+                <img src="img/jpg/products_boho-earrings.jpg" srcset="img/jpg/products_boho-earrings@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Boho earrings</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 75</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_gold-bird-necklace.webp 1x, img/webp/products_gold-bird-necklace@2x.webp 2x">
+                <img src="img/jpg/products_gold-bird-necklace.jpg" srcset="img/jpg/products_gold-bird-necklace@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Gold bird necklace</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 135</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_black-leather-choker.webp 1x, img/webp/products_black-leather-choker@2x.webp 2x">
+                <img src="img/jpg/products_black-leather-choker.jpg" srcset="img/jpg/products_black-leather-choker@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Black leather choker</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 85</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_necklace-with-amethyst.webp 1x, img/webp/products_necklace-with-amethyst@2x.webp 2x">
+                <img src="img/jpg/products_necklace-with-amethyst.jpg" srcset="img/jpg/products_necklace-with-amethyst@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Necklace with amethyst</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 145</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_elephant-earrings.webp 1x, img/webp/products_elephant-earrings@2x.webp 2x">
+                <img src="img/jpg/products_elephant-earrings.jpg" srcset="img/jpg/products_elephant-earrings@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Elephant earrings</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 95</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_threader-necklace.webp 1x, img/webp/products_threader-necklace@2x.webp 2x">
+                <img src="img/jpg/products_threader-necklace.jpg" srcset="img/jpg/products_threader-necklace@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Threader necklace</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 155</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_origami-crane-necklace.webp 1x, img/webp/products_origami-crane-necklace@2x.webp 2x">
+                <img src="img/jpg/products_origami-crane-necklace.jpg" srcset="img/jpg/products_origami-crane-necklace@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Origami crane necklace</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 105</b></p>
+            </div>
+          </a>
+          <a href="#" class="catalog__product-list-item product product--catalog-page">
+            <div class="product__image">
+              <picture>
+                <source type="image/webp" srcset="img/webp/products_marble-earrings.webp 1x, img/webp/products_marble-earrings@2x.webp 2x">
+                <img src="img/jpg/products_marble-earrings.jpg" srcset="img/jpg/products_marble-earrings@2x.jpg" width="270" height="272" alt="CHJewellery Instagram Image">
+              </picture>
+            </div>
+            <div class="product__name-box">
+              <p>Marble earrings</p>
+            </div>
+            <div class="product__price-box">
+              <p><b>$ 95</b></p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="catalog__list-controls">
+        <div class="catalog__list-controls-inner">
+          <button class="catalog__items-group-toggle catalog__items-group-toggle--prev">Previous</button>
+          <div class="catalog__pagination">
+            <ul class="catalog__pagination-list">
+              <li class="catalog__pagination-item"><span>1</span></li>
+              <li class="catalog__pagination-item"><span>2</span></li>
+              <li class="catalog__pagination-item"><span>3</span></li>
+              <li class="catalog__pagination-item"><span>4</span></li>
+              <li class="catalog__pagination-item"><span>5</span></li>
+            </ul>
+          </div>
+          <button class="catalog__items-group-toggle catalog__items-group-toggle--next">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <div class="page-footer__subscribe-box">
+        <h2>The good stuff in&nbsp;your&nbsp;inbox</h2>
+        <p>News and updates from CH. No spam, we&nbsp;promise.</p>
+        <div class="page-footer__subscribe-form">
+          <form action="https://echo.htmlacademy.ru" name="subscribe" method="post" target="_blank">
+            <input type="email" placeholder="Your E-mail" name="subscribe" autocomplete="off" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="page-footer__links-box">
+        <ul class="page-footer__navigation">
+          <li class="page-footer__navigation-item"><a href="#">Ordering & Payment</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Terms & Conditions</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Returns & Exchanges</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Delivery</a></li>
+          <li class="page-footer__navigation-item"><a href="#">About CH</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Stores & Hours</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Jobs</a></li>
+          <li class="page-footer__navigation-item"><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="page-footer__socials">
+          <li class="page-footer__socials-item">
+            <a href="#">
+              <svg class="page-footer__facebook-logo" width="8" height="15">
+                <use xlink:href="img/svg/sprite.svg#facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="page-footer__socials-item">
+            <a href="#">
+              <svg class="page-footer__instagram-logo" width="15" height="15">
+                <use xlink:href="img/svg/sprite.svg#instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="page-footer__socials-item">
+            <a href="#">
+              <svg class="page-footer__pinterest-logo" width="15" height="15">
+                <use xlink:href="img/svg/sprite.svg#pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="page-footer__socials-item">
+            <a href="#">
+              <svg class="page-footer__twitter-logo" width="15" height="13">
+                <use xlink:href="img/svg/sprite.svg#twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <section class="login">
+    <div class="login__pop-up">
+      <div class="login__header">
+        <button class="login__close-button" type="button" aria-label="Close Log In Form">
+          <svg width="14" height="14">
+            <use xlink:href="img/svg/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="login__inner">
+        <h2>Log In</h2>
+        <form action="https://echo.htmlacademy.ru" name="login-form" method="post" target="_blank">
+          <input type="email" name="email" placeholder="Yout E-mail" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <div class="login__password-recovery">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="login__submit button" type="submit">Log In</button>
+          <div class="login__sign-up-link">
+            <p>Don't have an account?&ensp;<a href="#">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

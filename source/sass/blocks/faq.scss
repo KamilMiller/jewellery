@@ -1,0 +1,120 @@
+// F.A.Q.
+
+.faq {
+  margin-bottom: 110px;
+  padding-top: 70px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 76px;
+    padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 61px;
+    padding-top: 10px;
+  }
+}
+
+.faq h2 {
+  @include font(34px, 44.2px);
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $main-text-color;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 27px;
+  }
+}
+
+.faq__inner {
+  @include center-fix-width(15px, 1000px);
+
+  @media (max-width: $tablet-width) {
+    @include side-padding(45px, 45px);
+  }
+
+  @media (max-width: $mobile-width) {
+    @include side-padding(15px, 15px);
+  }
+}
+
+.faq__item {
+  padding: 40px 50px 42px 37px;
+  box-sizing: border-box;
+  border-top: 1px solid $main-brown;
+  border-left: 1px solid $main-brown;
+  border-right: 1px solid $main-brown;
+
+  &:last-child {
+    border-bottom: 1px solid $main-brown;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 14px 23px 19px 12px;
+  }
+}
+
+.faq__question {
+  display: flex;
+  padding: 3px 0 0 5px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 12px;
+  }
+}
+
+.faq__toggle {
+  margin-left: auto;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 15px;
+  }
+}
+
+.faq__answer {
+  max-width: 520px;
+  margin-top: 10px;
+  margin-left: 12px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 530px;
+    margin-top: 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 14px;
+    margin-right: 35px;
+  }
+}
+
+.faq__question p,
+.faq__answer p {
+  margin: 0;
+  color: $main-text-color;
+}
+
+.faq__question p {
+  @include font(18px, 23.4px);
+
+  @media (max-width: $mobile-width) {
+    @include font(16px, 22.4px);
+  }
+}
+
+.faq__answer p {
+  @include font(16px, 20.8px);
+  font-weight: 400;
+
+  @media (max-width: $mobile-width) {
+    @include font(14px, 19.6px);
+  }
+}

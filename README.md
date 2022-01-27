@@ -2,7 +2,7 @@
 
 Акселератор [HTML Academy](https://htmlacademy.ru/).
 Исполнитель: [Камиль Нажмудинов](https://up.htmlacademy.ru/adaptive/22/user/253339).
-Наставник: [Анна Русяева].
+Наставник: Анна Русяева.
 
 2022
 

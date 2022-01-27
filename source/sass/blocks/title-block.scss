@@ -1,0 +1,99 @@
+// Title
+
+.title-block {
+  min-height: 463px;
+  text-align: center;
+  background-image: url("../img/jpg/main-intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/main-intro-bg@2x.jpg");
+  }
+
+  &--catalog-page {
+    min-height: 261px;
+    background-image: url("../img/jpg/catalog-intro-bg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/catalog-intro-bg@2x.jpg");
+    }
+  }
+}
+
+.title-block__inner {
+  @include side-padding(15px, 15px);
+  width: 100%;
+  min-height: 463px;
+  padding-top: 180px;
+  box-sizing: border-box;
+  background-color: rgba($dark-brown, 0.7);
+
+  @media (max-width: $tablet-width) {
+    padding-right: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 189px;
+    padding-right: 15px;
+  }
+}
+
+.title-block--catalog-page .title-block__inner {
+  min-height: 261px;
+  padding-top: 92px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 80px;
+  }
+}
+
+.title-block__inner p {
+  @include font(45px, 58.5px);
+  margin-top: 0;
+  margin-bottom: -6px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $mobile-width) {
+    @include font(38px, 49.4px);
+  }
+}
+
+.title-block--catalog-page p {
+  @include font(34px, 42.2px);
+  letter-spacing: normal;
+  margin-bottom: 4px;
+}
+
+.title-block__inner i {
+  @include font(38px, 49.4px);
+  margin-bottom: 50px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: $white;
+  text-transform: lowercase;
+
+  @media (max-width: $mobile-width) {
+    @include font(34px, 44.2px);
+  }
+}
+
+.title-block--catalog-page i {
+  @include font(22px, 28.6px);
+  font-weight: 500;
+  text-transform: none;
+
+  @media (max-width: $mobile-width) {
+    line-height: 26.6px;
+  }
+}

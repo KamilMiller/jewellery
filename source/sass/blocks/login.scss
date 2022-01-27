@@ -1,0 +1,251 @@
+// Login
+
+.login {
+  display: none;
+
+  &--open {
+    @include size(100vw, 100vh);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($black, 0.6);
+
+    @media (max-width: $tablet-width) {
+      background-color: $white;
+    }
+  }
+
+  &--page {
+    @include size(100vw, 100vh);
+    // left: 0;
+    // top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.login__pop-up {
+  width: 430px;
+  min-height: 586px;
+  box-sizing: border-box;
+  background-color: $blog-bg;
+  box-shadow: 0 4px 10px rgba($black, 0.4);
+
+  @media (max-width: $tablet-width) {
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    min-height: 470px;
+  }
+}
+
+.login__header {
+  position: relative;
+  min-height: 138px;
+  margin-bottom: 50px;
+  background-image: url("../img/jpg/login-modal-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/login-modal-bg@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 84px;
+    margin-bottom: 37px;
+  }
+}
+
+.login__close-button {
+  @include size(40px, 40px);
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: block;
+  padding: 5px 0 0 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $main-text-color;
+  }
+
+  &:active {
+    border: 1px solid $main-brown;
+  }
+
+  &:active svg {
+    fill: $main-brown;
+  }
+}
+
+.login--page .login__close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  @media (max-width: $tablet-width) {
+    top: 10px;
+    right: 10px;
+  }
+
+}
+
+.login--open .login__close-button {
+  @media (max-width: $mobile-width) {
+    top: 2px;
+    right: 2px;
+  }
+}
+
+.login__close-button svg {
+  @media (max-width: $tablet-width) {
+    @include size(20px, 20px);
+  }
+
+  @media (max-width: $mobile-width) {
+    @include size(14px, 14px);
+  }
+}
+
+.login__inner {
+  @include side-padding(45px, 45px);
+
+  @media (max-width: $tablet-width) {
+    @include side-padding(51px, 51px);
+  }
+
+  @media (max-width: $mobile-width) {
+    @include side-padding(15px, 15px);
+  }
+}
+
+.login__pop-up h2 {
+  @include font(34px, 42.2px);
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    @include font(24px, 31.2px);
+    margin-bottom: 17px;
+  }
+}
+
+.login__pop-up input {
+  @include size(100%, 40px);
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $main-text-color;
+
+  &::placeholder {
+    @include font(14px, 21px);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $main-brown;
+  }
+}
+
+.login__pop-up input[type="email"] {
+  margin-bottom: 25px;
+}
+
+.login--open input[type="email"] {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.login__password-recovery {
+  margin-bottom: 45px;
+  padding-top: 4px;
+  text-align: right;
+}
+
+.login--open .login__password-recovery {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.login__password-recovery a {
+  @include font(12px, 18px);
+  margin-top: 10px;
+  text-decoration: none;
+  color: $text-gray;
+
+  &:hover {
+    color: $main-brown;
+  }
+
+  &:active {
+    color: rgba($main-brown, 0.8)
+  }
+}
+
+.login__submit {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login__sign-up-link {
+  @include font(14px, 21px);
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.login__sign-up-link p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $text-gray;
+}
+
+.login__sign-up-link a {
+  text-decoration: none;
+  color: $main-text-color;
+
+  &:hover {
+    color: $main-brown;
+  }
+
+  &:active {
+    color: rgba($main-brown, 0.8)
+  }
+}
+
+.login__home-link {
+  margin-bottom: 30px;
+}
+
+.login__logo {
+  fill: $main-brown;
+
+
+  &:hover {
+    fill: rgba($main-brown, 0.8);
+  }
+
+  &:active {
+    fill: $main-text-color;
+  }
+}

@@ -4,4 +4,26 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/mixins.scss";
+// ===>
+@import "vendor/swiper.scss";
+@import "vendor/swiper-vars.scss";
+@import "vendor/navigation.scss";
+@import "vendor/pagination.scss";
+// ===>
 @import "blocks/page.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/title-block.scss";
+@import "blocks/new-products.scss";
+@import "blocks/blog.scss";
+@import "blocks/post.scss";
+@import "blocks/accordion-toggle.scss";
+@import "blocks/faq.scss";
+@import "blocks/gallery.scss";
+@import "blocks/product.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/login.scss";
+

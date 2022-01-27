@@ -3,8 +3,9 @@
 .page {
   min-width: 320px;
   height: 100%;
-  // font-family: "PT Mono", "Arial", sans-serif;
-  // font-weight: 400;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  color: $main-text-color;
   background-color: $white;
   scroll-behavior: smooth;
 }
@@ -15,11 +16,17 @@
   min-height: 100%;
   margin: 0;
 
-  // &--modal-open {
-  //   overflow: hidden;
-  // }
+  &--modal-open {
+    overflow: hidden;
+  }
 }
 
 .page__main {
   flex-grow: 2;
+
+  &--nav-open {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
 }

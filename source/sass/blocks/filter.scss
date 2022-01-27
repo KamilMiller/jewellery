@@ -1,0 +1,362 @@
+// Filter
+
+.filter {
+
+  &--pop-up {
+    @media (max-width: $tablet-width) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+}
+
+.filter form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter--pop-up form {
+  @media (max-width: $tablet-width) {
+    width: 423px;
+    margin-top: 27px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px $header-line;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include side-margin(auto, auto);
+    width: 270px;
+    margin-bottom: 60px;
+  }
+}
+
+.filter__close-button {
+  display: none;
+}
+
+.filter__close-button svg {
+  fill: $white;
+}
+
+.filter--pop-up .filter__close-button {
+  @media (max-width: $tablet-width) {
+    @include size(32px, 32px);
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    z-index: 2;
+    display: block;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: $main-text-color;
+
+
+    &:hover {
+      background-color: $main-brown;
+    }
+
+    &:active {
+      background-color: rgba($main-brown, 0.8);
+    }
+  }
+}
+
+.filter__group {
+  @include side-margin(0, 0);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 25px 24px 25px;
+  border-top: 1px solid $main-brown;
+  border-left: 1px solid $main-brown;
+  border-right:  1px solid $main-brown;
+  border-bottom: none;
+
+  &:last-of-type {
+    margin-bottom: 35px;
+    border-bottom:  1px solid $main-brown;
+  }
+}
+
+.filter--pop-up .filter__group {
+  @media (max-width: $tablet-width) {
+    padding: 33px 22px 36px 22px;
+    border-top: none;
+    border-bottom:  1px solid $main-brown;
+    border-left: none;
+    border-right: none;
+
+    &:last-of-type {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 25px;
+    padding-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.filter__group-name {
+  @include font(16px, 20.8px);
+  float: left;
+  display: block;
+  color: $main-text-color;
+  cursor: pointer;
+}
+
+.filter--pop-up .filter__group-name {
+  @include font(18px, 23.4px);
+}
+
+.filter__fieldset-toggle {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+}
+
+.filter--pop-up .filter__fieldset-toggle {
+  @media (max-width: $tablet-width) {
+    top: 35px;
+    right: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 27px;
+    right: 19px;
+  }
+}
+
+.filter__group-inner {
+  padding-top: 22px;
+  padding-left: 9px;
+
+  &--price {
+    @include size(100%, 26px);
+    padding: 22px 0 0 0;
+  }
+}
+
+.filter--pop-up .filter__group-inner {
+  padding-top: 26px;
+
+  &--price {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 10px;
+      padding-top: 31px;
+    }
+  }
+}
+
+.filter__input-wrapper {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter--pop-up .filter__input-wrapper:not(:last-child) {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.filter__group label {
+  @include font(14px, 18.2px);
+  position: relative;
+  padding-left: 25px;
+  color: $main-text-color;
+  cursor: pointer;
+
+  &::before {
+    @include size(15px, 15px);
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid $main-brown;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.filter--pop-up label {
+  @media (max-width: $tablet-width) {
+    @include font(16px, 20.8px);
+    padding-left: 29px;
+
+    &::before {
+      @include size(18px, 18px);
+      top: 3px;
+    }
+  }
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: $main-brown;
+}
+
+input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.filter__scale-line {
+  @include size(198px, 1px);
+  position: relative;
+  background-color: $blog-bg;
+
+  &::before,
+  &::after {
+    @include size(auto, 15px);
+    @include font(14px, 18.2px);
+    position: absolute;
+    top: 15px;
+    display: block;
+  }
+
+  &::before {
+    content: "$ 55";
+    left: 37px;
+  }
+
+  &::after {
+    content: "$ 155";
+    right: 23px;
+  }
+}
+
+.filter--pop-up .filter__scale-line {
+  @media (max-width: $tablet-width) {
+    width: 304px;
+    margin-left: 9px;
+
+    &::before,
+    &::after {
+      @include font(16px, 20.8px);
+      top: 17px;
+    }
+
+    &::after {
+      right: 55px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 237px;
+    margin-left: -11px;
+
+    &::before {
+      left: 31px;
+    }
+
+    &::after {
+      right: 31px;
+    }
+  }
+}
+
+.filter__scale-active {
+  @include size(94px, 1px);
+  position: relative;
+  margin-left: 58px;
+  background-color: $main-brown;
+
+  &::before,
+  &::after {
+    @include size(18px, 18px);
+    content: "";
+    position: absolute;
+    top: -7px;
+    display: block;
+    border-radius: 50%;
+    background-color: $main-brown;
+    cursor: pointer;
+  }
+
+  &::before {
+    left: -13px;
+  }
+
+  &::after {
+    right: -13px;
+  }
+}
+
+.filter--pop-up .filter__scale-active {
+  @media (max-width: $tablet-width) {
+    width: 164px;
+    margin-left: 60px;
+
+    &::before,
+    &::after {
+      top: -8px;
+    }
+
+    &::before {
+      left: -15px;
+    }
+
+    &::after {
+      right: -15px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 126px;
+    margin-left: 54px;
+  }
+}
+
+.filter__submit,
+.filter__reset {
+  @media (max-width: $tablet-width) {
+    @include side-margin(20px, 20px);
+  }
+}
+
+.filter--pop-up .filter__submit,
+.filter--pop-up .filter__reset {
+  @media (max-width: $tablet-width) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 20px;
+  }
+}
+
+.filter__submit {
+  margin-bottom: 25px;
+}
+
+.filter--pop-up .filter__submit {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__reset {
+  margin-bottom: 20px;
+}

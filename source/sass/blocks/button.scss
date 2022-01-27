@@ -1,0 +1,43 @@
+// Button
+
+.button {
+  @include font(16px, 20.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 68px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: $main-brown;
+  font-weight: 500;
+  color: $white;
+  border: 1px solid $main-brown;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($main-brown, 0.9);
+  }
+
+  &:active {
+    background-color: rgba($main-brown, 0.7);
+  }
+
+  &--transparent {
+    color: $main-text-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      outline: 1px solid $main-brown;
+    }
+
+    &:active {
+      background-color: transparent;
+      border: 1px solid rgba($main-brown, 0.8);
+      outline: 1px solid rgba($main-brown, 0.8);
+    }
+  }
+}

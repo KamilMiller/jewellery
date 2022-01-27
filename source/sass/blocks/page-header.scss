@@ -1,0 +1,238 @@
+// Page Header
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page-header__inner {
+  @include center-fix-width(15px, 1200px);
+  display: grid;
+  grid-template-columns: 1fr 66px 1fr;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 18px;
+
+  @media (max-width: $tablet-width) {
+    @include side-padding(45px, 45px);
+    padding-bottom: 29px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include side-padding(15px, 15px);
+    padding-top: 20px;
+    padding-bottom: 19px;
+  }
+}
+
+.page-header__button-box {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    line-height: 0;
+  }
+}
+
+.page-header__menu-button {
+  @include size(24px, 18px);
+  position: relative;
+  margin-top: 24px;
+  padding: 0;
+  border-top: 2px solid $black;
+  border-bottom: 2px solid $black;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  outline: none;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 17px;
+  }
+
+  &::after {
+    @include size(24px, 2px);
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    display: block;
+    background-color: $black;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.page-header__form-wrapper {
+  @media (max-width: $tablet-width) {
+    display: none;
+    order: 4;
+  }
+}
+
+.page-header__form-wrapper input {
+  @include side-padding(30px, 5px);
+  position: relative;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-image: url("../img/svg/loupe-icon-black.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &:focus {
+    border-bottom: 1px solid $dark-brown;
+  }
+
+  &::placeholder {
+    @include font(14px, 21px);
+    color: $text-gray;
+  }
+}
+
+.page-header__home-link {
+  @include side-margin(auto, auto);
+  justify-self: center;
+  line-height: 0;
+}
+
+.page-header__logo {
+  fill: $main-brown;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    @include size(52px, 52px);
+  }
+
+  &:hover {
+    fill: rgba($main-brown, 0.8);
+  }
+
+  &:active {
+    fill: $main-text-color;
+  }
+}
+
+.page-header__user-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 35px;
+}
+
+.page-header__user-links a {
+  @include font(14px, 21px);
+  color: $main-text-color;
+  text-decoration: none;
+  margin-top: 13px;
+
+  &:hover {
+    color: $main-brown;
+  }
+
+  &:active {
+    color: rgba($main-brown, 0.7);
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.page-header__login {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__cart {
+  @media (max-width: $tablet-width) {
+    height: 18px;
+    line-height: 0;
+  }
+}
+
+.page-header--nav-open .page-header__cart {
+  @media (max-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.page-header__cart span {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__cart svg {
+  fill: $black;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 7px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0;
+  }
+}
+
+.page-header--nav-open {
+  @media (max-width: $tablet-width) {
+    z-index: 3;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $main-brown;
+  }
+}
+
+.page-header--nav-open .page-header__menu-button {
+  border-color: $white;
+
+  &::after {
+    background-color: $white;
+  }
+}
+
+.page-header--nav-open svg {
+  @media (max-width: $tablet-width) {
+    fill: $white;
+  }
+}
+
+.page-header--nav-open .page-header__form-wrapper {
+  @media (max-width: $tablet-width) {
+    grid-column: 1 / 4;
+    display: block;
+    padding-top: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 30px;
+  }
+}
+
+.page-header--nav-open input[type="search"] {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    border-radius: calc(0.5 * 800px);
+    background-color: rgba($white, 0.15);
+    background-image: url("../img/svg/loupe-icon-white.svg");
+    background-position: 13px center;
+
+    &:focus {
+      border: none;
+    }
+
+    &::placeholder {
+      color: transparent;
+      font-size: 0;
+    }
+  }
+}

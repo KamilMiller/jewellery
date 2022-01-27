@@ -1,0 +1,135 @@
+// Post in Blog
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--big {
+    @media (min-width: $desktop-width) {
+      position: relative;
+      grid-template-rows: 300px;
+      row-gap: 30px;
+    }
+  }
+}
+
+.post--reflected .post__content-box {
+  @media (min-width: $tablet-min-width) {
+    order: 2;
+  }
+}
+
+.post--big .post__content-box {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    z-index: 1;
+  }
+}
+
+.post--big .post__picture {
+  @media (min-width: $desktop-width) {
+    @include size(100%, 100%);
+    position: absolute;
+  }
+}
+
+.post__content-box {
+  padding: 65px 40px 40px 40px;
+  box-sizing: border-box;
+  background-color: $blog-bg;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 43px;
+    min-height: 256px;
+    order: 2;
+  }
+}
+
+.post__content-box p {
+  @include font(14px, 18.2px);
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: $text-gray;
+}
+
+.post__content-box h3 {
+  @include font(26px, 33.8px);
+  margin-top: 0;
+  margin-bottom: 38px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 600;
+  color: $black;
+}
+
+.post__content-box a{
+  @include font(16px, 20.8px);
+  position: relative;
+  display: block;
+  color: $main-text-color;
+  text-decoration: none;
+
+  &::after {
+    @include size(97px, 1px);
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $main-brown;
+  }
+
+  &:hover {
+    color: $main-brown;
+  }
+
+  &:active {
+    color: rgba($main-brown, 0.8);
+
+    &::after {
+      background-color: rgba($main-brown, 0.8);
+    }
+  }
+}
+
+.post__picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $mobile-width) {
+    min-height: 256px;
+  }
+}
+
+.post--30092021 .post__picture {
+  background-image: url("../img/jpg/blog-1-desktop.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/blog-1-desktop@2x.jpg");
+  }
+}
+
+.post--23092021 .post__picture {
+  background-image: url("../img/jpg/blog-2-desktop.jpg");
+  background-position: center right;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/blog-2-desktop@2x.jpg");
+  }
+}
+
+.post--16092021 .post__picture {
+  background-image: url("../img/jpg/blog-3-desktop.jpg");
+  background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/blog-3-desktop@2x.jpg");
+  }
+}
