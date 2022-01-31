@@ -36,7 +36,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/css'))
+    // .pipe(gulp.dest('build/css'))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -53,7 +53,7 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 

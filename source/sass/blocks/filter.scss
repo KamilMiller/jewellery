@@ -1,7 +1,6 @@
 // Filter
 
 .filter {
-
   &--pop-up {
     @media (max-width: $tablet-width) {
       position: fixed;
@@ -81,12 +80,12 @@
   padding: 24px 25px 24px 25px;
   border-top: 1px solid $main-brown;
   border-left: 1px solid $main-brown;
-  border-right:  1px solid $main-brown;
+  border-right: 1px solid $main-brown;
   border-bottom: none;
 
   &:last-of-type {
     margin-bottom: 35px;
-    border-bottom:  1px solid $main-brown;
+    border-bottom: 1px solid $main-brown;
   }
 }
 
@@ -94,7 +93,7 @@
   @media (max-width: $tablet-width) {
     padding: 33px 22px 36px 22px;
     border-top: none;
-    border-bottom:  1px solid $main-brown;
+    border-bottom: 1px solid $main-brown;
     border-left: none;
     border-right: none;
 
@@ -113,33 +112,30 @@
   }
 }
 
-.filter__group-name {
+.filter legend {
   @include font(16px, 20.8px);
   float: left;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   color: $main-text-color;
   cursor: pointer;
 }
 
-.filter--pop-up .filter__group-name {
+.filter--pop-up legend {
   @include font(18px, 23.4px);
-}
-
-.filter__fieldset-toggle {
-  position: absolute;
-  top: 23px;
-  right: 23px;
 }
 
 .filter--pop-up .filter__fieldset-toggle {
   @media (max-width: $tablet-width) {
     top: 35px;
     right: 41px;
+    margin-right: 19px;
   }
 
   @media (max-width: $mobile-width) {
     top: 27px;
     right: 19px;
+    margin-right: 0;
   }
 }
 

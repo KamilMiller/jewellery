@@ -211,19 +211,20 @@
   width: auto;
 }
 
-.new-products--nojs .new-products__nojs-paginaton-item:nth-child(1),
-.new-products--nojs .new-products__nojs-paginaton-item:nth-child(2),
-.new-products--nojs .new-products__nojs-paginaton-item:nth-child(3) {
+.new-products--nojs .new-products__nojs-paginaton-item-1,
+.new-products--nojs .new-products__nojs-paginaton-item-2,
+.new-products--nojs .new-products__nojs-paginaton-item-3 {
   display: inline;
 }
 
-.new-products--nojs .new-products__nojs-paginaton-item:nth-child(4) {
+.new-products--nojs .new-products__nojs-paginaton-item-4 {
   @media (max-width: 1169px) {
     display: inline;
   }
 }
 
-.new-products--nojs .new-products__nojs-paginaton-item:nth-child(n + 5) {
+.new-products--nojs .new-products__nojs-paginaton-item-5,
+.new-products--nojs .new-products__nojs-paginaton-item-6 {
   @media (max-width: $tablet-width) {
     display: inline;
   }
