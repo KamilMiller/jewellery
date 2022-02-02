@@ -48,6 +48,7 @@
   border-top: 1px solid $main-brown;
   border-left: 1px solid $main-brown;
   border-right: 1px solid $main-brown;
+  cursor: pointer;
 
   &:last-child {
     border-bottom: 1px solid $main-brown;
@@ -65,7 +66,6 @@
 .faq__question {
   display: flex;
   padding: 3px 0 0 5px;
-  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     padding-left: 12px;

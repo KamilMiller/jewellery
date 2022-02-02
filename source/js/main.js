@@ -1,4 +1,3 @@
-import './vendor.js';
 import { Swiper } from './vendor.js';
 import { createFocusTrap } from './vendor.js';
 
@@ -24,6 +23,7 @@ const loginForm = loginElement.querySelector('form');
 const loginCloseButton = loginElement.querySelector('.login__close-button');
 const loginEmailField = loginElement.querySelector('input[type="email"]');
 const loginPasswordField = loginElement.querySelector('input[type="password"]');
+
 
 // Utils
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
@@ -84,18 +84,6 @@ if (mobilePagination) {
   mobilePagination.textContent = `1 of ${slideFractionCount}`;
 };
 
-const makeAllButCurrentSlideInert = function makeAllButCurrentSlideInert() {
-  const currentSlideEl = this.slides[this.realIndex];
-
-  this.slides.each((slide) => {
-    if (slide !== currentSlideEl) {
-      slide.setAttribute('inert', 'inert');
-    } else {
-      slide.removeAttribute('inert');
-    }
-  });
-};
-
 const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerGroup: 2,
@@ -122,17 +110,30 @@ const swiper = new Swiper('.swiper', {
       slidesPerGroup: 4,
     },
   },
+  slideVisibleClass: 'swiper-slide-visible',
+  watchSlidesProgress: true,
   on: {
     init() {
-      makeAllButCurrentSlideInert.call(this);
+      let slidesArr = document.querySelectorAll('.swiper-slide');
+      slidesArr.forEach((element) => {
+        if (!element.classList.contains('swiper-slide-visible')) {
+          element.setAttribute('tabindex', '-1');
+          let sliderLink = element.querySelector('a');
+          sliderLink.setAttribute('tabindex', '-1');
+        }
+      })
     },
     slideChange() {
-      makeAllButCurrentSlideInert.call(this);
-    },
-    slideChangeTransitionEnd() {
-      const currentSlideEl = this.slides[this.realIndex];
-      currentSlideEl.setAttribute('tabindex', '-1');
-      currentSlideEl.focus();
+      let slidesArr = document.querySelectorAll('.swiper-slide');
+      slidesArr.forEach((element) => {
+        let sliderLink = element.querySelector('a');
+        element.removeAttribute('tabindex', '-1');
+        sliderLink.removeAttribute('tabindex', '-1');
+        if (!element.classList.contains('swiper-slide-visible')) {
+          element.setAttribute('tabindex', '-1');
+          sliderLink.setAttribute('tabindex', '-1');
+        }
+      })
     },
   },
 });
@@ -170,7 +171,7 @@ if (window.location.pathname.indexOf('main.html') >= 0) {
   faqAnswer.forEach(element => element.setAttribute('hidden', 'hidden'));
 
   faq.addEventListener('click', (evt) => {
-    onAccordionToggleClick(evt, '.faq__question');
+    onAccordionToggleClick(evt, '.faq__item');
   });
 }
 
@@ -220,7 +221,7 @@ if (window.location.pathname.indexOf('catalog.html') >= 0) {
   filterCloseButton = filterWrapper.querySelector('.filter__close-button');
   filterSubmitButton = filter.querySelector('.filter__submit');
   filter.addEventListener('click', (evt) => {
-    onAccordionToggleClick(evt, 'legend');
+    onAccordionToggleClick(evt, '.filter__group');
   });
   filterOpenButton.addEventListener('click', openFilter);
 }

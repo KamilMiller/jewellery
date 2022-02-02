@@ -82,6 +82,7 @@
   border-left: 1px solid $main-brown;
   border-right: 1px solid $main-brown;
   border-bottom: none;
+  cursor: pointer;
 
   &:last-of-type {
     margin-bottom: 35px;
@@ -118,7 +119,6 @@
   display: flex;
   justify-content: space-between;
   color: $main-text-color;
-  cursor: pointer;
 }
 
 .filter--pop-up legend {
