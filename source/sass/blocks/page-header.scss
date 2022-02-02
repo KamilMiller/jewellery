@@ -101,18 +101,22 @@
 
 .page-header__logo {
   fill: $main-brown;
-  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     @include size(52px, 52px);
   }
 
-  &:hover {
-    fill: rgba($main-brown, 0.8);
-  }
+  &--catalog-page {
+    cursor: pointer;
 
-  &:active {
-    fill: $main-text-color;
+    &:hover {
+      fill: rgba($main-brown, 0.8);
+    }
+
+    &:active {
+      fill: $main-text-color;
+    }
+
   }
 }
 

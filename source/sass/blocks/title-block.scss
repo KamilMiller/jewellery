@@ -19,6 +19,14 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/jpg/catalog-intro-bg@2x.jpg");
     }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../../img/jpg/catalog-intro-mobile-bg.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/jpg/catalog-intro-mobile-bg@2x.jpg");
+      }
+    }
   }
 }
 

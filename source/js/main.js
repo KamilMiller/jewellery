@@ -137,7 +137,7 @@ const onAccordionToggleClick = (evt, toggleName) => {
 let faq;
 let faqAnswer;
 
-if (window.location.pathname === '/main.html') {
+if (window.location.pathname.indexOf('main.html') >= 0) {
   faq = document.querySelector('.faq__inner');
   faqAnswer = document.querySelectorAll('.faq__answer');
 
@@ -187,7 +187,7 @@ function onSpaceAroundFormClick(evt) {
   }
 };
 
-if (window.location.pathname === '/catalog.html') {
+if (window.location.pathname.indexOf('catalog.html') >= 0) {
   filterWrapper = document.querySelector('.filter');
   filter = filterWrapper.querySelector('form');
   filterOpenButton = document.querySelector('.catalog__filter-toggle');
@@ -204,21 +204,19 @@ if (window.location.pathname === '/catalog.html') {
 let modalFocusTrap = createFocusTrap(loginElement);
 
 function openLogin() {
-  let arr = document.querySelectorAll('[tabindex="2"]').forEach(element => element.setAttribute('tabindex', '-1'));
   loginElement.classList.add('login--open');
   page.classList.add('page__body--modal-open');
   loginEmailField.focus();
   loginEmailField.select();
-  loginCloseButton.addEventListener('click', closeLogin);
+  loginCloseButton.addEventListener('click', onLogInCloseButtonClick);
   loginElement.addEventListener('click', onSpaceAroundLogInClick);
   document.addEventListener('keydown', onLogInEscKeyDown);
 }
 
 function closeLogin() {
-  let arr = document.querySelectorAll('[tabindex="-1"]').forEach(element => element.setAttribute('tabindex', '2'));
   loginElement.classList.remove('login--open');
   page.classList.remove('page__body--modal-open');
-  loginCloseButton.removeEventListener('click', closeLogin);
+  loginCloseButton.removeEventListener('click', onLogInCloseButtonClick);
   loginElement.removeEventListener('click', onSpaceAroundLogInClick);
   document.removeEventListener('keydown', onLogInEscKeyDown);
 }
@@ -237,6 +235,11 @@ function onSpaceAroundLogInClick(evt) {
     modalFocusTrap.deactivate();
   }
 };
+
+function onLogInCloseButtonClick() {
+  closeLogin();
+  modalFocusTrap.deactivate();
+}
 
 headerLoginLink.addEventListener('click', (evt) => {
   evt.preventDefault();
