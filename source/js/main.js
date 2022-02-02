@@ -1,3 +1,4 @@
+import './vendor.js';
 import { Swiper } from './vendor.js';
 import { createFocusTrap } from './vendor.js';
 
@@ -83,6 +84,18 @@ if (mobilePagination) {
   mobilePagination.textContent = `1 of ${slideFractionCount}`;
 };
 
+const makeAllButCurrentSlideInert = function makeAllButCurrentSlideInert() {
+  const currentSlideEl = this.slides[this.realIndex];
+
+  this.slides.each((slide) => {
+    if (slide !== currentSlideEl) {
+      slide.setAttribute('inert', 'inert');
+    } else {
+      slide.removeAttribute('inert');
+    }
+  });
+};
+
 const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerGroup: 2,
@@ -107,6 +120,19 @@ const swiper = new Swiper('.swiper', {
     1169: {
       slidesPerView: 4,
       slidesPerGroup: 4,
+    },
+  },
+  on: {
+    init() {
+      makeAllButCurrentSlideInert.call(this);
+    },
+    slideChange() {
+      makeAllButCurrentSlideInert.call(this);
+    },
+    slideChangeTransitionEnd() {
+      const currentSlideEl = this.slides[this.realIndex];
+      currentSlideEl.setAttribute('tabindex', '-1');
+      currentSlideEl.focus();
     },
   },
 });
