@@ -67,12 +67,18 @@
 
   @media (max-width: $mobile-width) {
     @include side-padding(15px, 15px);
-    gap: 40px;
+    gap: normal;
   }
 }
 
 .blog__item {
   min-height: 300px;
+
+  &:not(:last-of-type) {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .blog__item--1 {

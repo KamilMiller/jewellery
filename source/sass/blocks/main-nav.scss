@@ -95,7 +95,7 @@
 
 .main-nav--open .main-nav__main-list {
   @media (max-width: $tablet-width) {
-    gap: 21px;
+    // gap: 21px;  // <===========
     margin-bottom: 40px;
     padding-left: 0;
   }
@@ -107,7 +107,7 @@
 
 .main-nav--open .main-nav__extra-list {
   @media (max-width: $tablet-width) {
-    gap: 19px;
+    // gap: 19px; // <============
     margin-bottom: 46px;
     padding: 0;
   }
@@ -121,6 +121,18 @@
   @media (max-width: $tablet-width) {
     @include font(18px, 23.4px);
     color: $white;
+  }
+}
+
+.main-nav__main-list--nav-open li:not(:last-of-type) {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.main-nav__extra-list--nav-open li:not(:last-of-type) {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 19px;
   }
 }
 
