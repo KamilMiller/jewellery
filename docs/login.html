@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Handmade Jewelry: necklaces, earrings and bracelets. Unique design. Affordable prices. Worldwide shipping.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHJewellery || online-shop</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <object style="display: none;" data="img/svg/sprite.svg" type="image/svg+xml"></object>
+  <main>
+    <h1 class="visually-hidden">Log In Form</h1>
+    <section class="login login--page">
+      <a class="login__home-link" href="main.html" aria-label="Home">
+        <svg class="login__logo" width="66" height="66">
+          <use xlink:href="img/svg/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="login__pop-up">
+        <div class="login__header">
+          <a class="login__close-button" href="javascript:history.go(-1)" aria-label="Close end go back">
+            <svg width="14" height="14">
+              <use xlink:href="img/svg/sprite.svg#close-icon"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="login__inner">
+          <h2>Log In</h2>
+          <form action="https://echo.htmlacademy.ru" name="login-form" method="post" target="_blank">
+            <label class="visually-hidden" for="email-field"></label>
+            <input type="email" name="email" id="email-field" placeholder="Yout E-mail" tabindex="1" required>
+            <label class="visually-hidden" for="password-field"></label>
+            <input type="password" name="password" id="password-field" placeholder="Password" tabindex="1" required>
+            <div class="login__password-recovery">
+              <a href="#">Forgot your password?</a>
+            </div>
+            <button class="login__submit button" type="submit">Log In</button>
+            <div class="login__sign-up-link">
+              <p>Don't have an account?&ensp;<a href="#">Sign Up</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
